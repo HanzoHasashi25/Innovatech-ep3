@@ -15,11 +15,10 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: {{ECR_URL}}/tienda-frontend:eks-v1
+          image: "{{ECR_URL}}/tienda-frontend:eks-v1"
           ports:
             - containerPort: 80
 
-          # Se agrega Resource para que Metrics Server calcule el % de CPU y Memoria para escalar 
           resources:
             requests:
               cpu: "50m"
