@@ -4,7 +4,7 @@ metadata:
   name: tienda-backend
   namespace: tienda
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: tienda-backend
@@ -14,7 +14,7 @@ spec:
         app: tienda-backend
     spec:
       containers:
-        - name: backend
+        - name: tienda-backend
           image: {{ECR_URL}}/tienda-backend:eks-v1
           ports:
             - containerPort: 3001
